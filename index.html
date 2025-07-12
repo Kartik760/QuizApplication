@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master - Test Your Knowledge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <div class="hero-section">
+                <h1>Quiz Master</h1>
+                <p class="subtitle">Choose your expertise area and test your knowledge</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="web-development">
+                    <div class="category-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript & more</p>
+                    <span class="question-count">5 questions</span>
+                </div>
+                
+                <div class="category-card" data-category="ai-automation">
+                    <div class="category-icon">🤖</div>
+                    <h3>AI & Automation</h3>
+                    <p>Machine Learning, AI tools & automation</p>
+                    <span class="question-count">5 questions</span>
+                </div>
+                
+                <div class="category-card" data-category="ui-ux">
+                    <div class="category-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>User interface & experience design</p>
+                    <span class="question-count">5 questions</span>
+                </div>
+                
+                <div class="category-card" data-category="programming">
+                    <div class="category-icon">💻</div>
+                    <h3>Programming</h3>
+                    <p>General programming concepts</p>
+                    <span class="question-count">5 questions</span>
+                </div>
+                
+                <div class="category-card" data-category="technology">
+                    <div class="category-icon">🚀</div>
+                    <h3>Technology</h3>
+                    <p>Latest tech trends & innovations</p>
+                    <span class="question-count">5 questions</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="category-info">
+                    <span id="category-name">Web Development</span>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="progress-fill"></div>
+                        </div>
+                        <span id="question-counter">1 of 5</span>
+                    </div>
+                </div>
+                <div class="score-display">
+                    <span id="score">0</span>
+                    <span class="score-label">points</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <h2 id="question-text">What does HTML stand for?</h2>
+                <div id="options-container" class="options-grid">
+                </div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="next-btn" class="btn-primary" disabled>
+                    <span>Next Question</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <div class="results-header">
+                    <h1>Quiz Complete!</h1>
+                    <p id="category-completed">Web Development</p>
+                </div>
+                
+                <div class="score-card">
+                    <div class="score-circle">
+                        <span id="final-score">80%</span>
+                    </div>
+                    <h2 id="performance-message">Excellent Work!</h2>
+                    <p id="score-details">You got 4 out of 5 questions correct</p>
+                </div>
+                
+                <div class="results-actions">
+                    <button id="restart-btn" class="btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                            <path d="M21 3v5h-5"/>
+                            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                            <path d="M3 21v-5h5"/>
+                        </svg>
+                        Try Again
+                    </button>
+                    <button id="home-btn" class="btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                        Back to Categories
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
